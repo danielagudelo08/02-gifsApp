@@ -29,10 +29,21 @@ export class GifsService {
       this._historial = this._historial.splice(0,10);
     }
 
+
     this.http.get('https://api.giphy.com/v1/gifs/search?api_key=Qd3FOYey4MoA3J0bl7qKfRmIRLNFFJ9G&q=Dragon Ball z&limit=10')
-    .subscribe(resp => {
-            console.log(resp);
-          } )
+    .subscribe( resp => {
+      console.log(resp);
+    } )
+    // const resp = await fetch('https://api.giphy.com/v1/gifs/search?api_key=Qd3FOYey4MoA3J0bl7qKfRmIRLNFFJ9G&q=Dragon Ball z&limit=10')
+    // const data = await resp.json();
+    // console.log(data);
+
+  //  fetch('https://api.giphy.com/v1/gifs/search?api_key=Qd3FOYey4MoA3J0bl7qKfRmIRLNFFJ9G&q=Dragon Ball z&limit=10')
+  //    .then( resp => {
+  //     resp.json().then( data =>{
+  //       console.log(data);
+  //     })
+  //    })
 
   }
 
